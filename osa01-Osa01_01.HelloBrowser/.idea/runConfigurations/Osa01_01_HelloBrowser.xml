@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Osa01_01.HelloBrowser" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="HelloBrowser" />
+    <module name="Osa01_01.HelloBrowser" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

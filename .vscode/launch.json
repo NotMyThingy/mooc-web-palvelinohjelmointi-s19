@@ -1,0 +1,91 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-HelloBrowser<Osa01_01.HelloBrowser>",
+            "request": "launch",
+            "mainClass": "HelloBrowser",
+            "projectName": "Osa01_01.HelloBrowser"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-HelloServer<Osa01_02.HelloServer>",
+            "request": "launch",
+            "mainClass": "HelloServer",
+            "projectName": "Osa01_02.HelloServer"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-HelloRedirectLoop<Osa01_03.HelloRedirectLoop>",
+            "request": "launch",
+            "mainClass": "HelloRedirectLoop",
+            "projectName": "Osa01_03.HelloRedirectLoop"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-HelloWorldApplication<Osa01_04.HelloWorld>",
+            "request": "launch",
+            "mainClass": "helloworld.HelloWorldApplication",
+            "projectName": "Osa01_04.HelloWorld"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-HelloPathApplication<Osa01_05.HelloPath>",
+            "request": "launch",
+            "mainClass": "hellopath.HelloPathApplication",
+            "projectName": "Osa01_05.HelloPath"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-HelloPathsApplication<Osa01_06.HelloPaths>",
+            "request": "launch",
+            "mainClass": "hellopaths.HelloPathsApplication",
+            "projectName": "Osa01_06.HelloPaths"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-HelloRequestParamApplication<Osa01_07.HelloRequestParam>",
+            "request": "launch",
+            "mainClass": "hellorequestparam.HelloRequestParamApplication",
+            "projectName": "Osa01_07.HelloRequestParam"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GreetingApplication<Osa01_08.Greeting>",
+            "request": "launch",
+            "mainClass": "greeting.GreetingApplication",
+            "projectName": "Osa01_08.Greeting"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-HelloRequestParamsApplication<Osa01_09.HelloRequestParams>",
+            "request": "launch",
+            "mainClass": "hellorequestparams.HelloRequestParamsApplication",
+            "projectName": "Osa01_09.HelloRequestParams"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SquareApplication<Osa01_10.Square>",
+            "request": "launch",
+            "mainClass": "square.SquareApplication",
+            "projectName": "Osa01_10.Square"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CalculatorApplication<Osa01_11.Calculator>",
+            "request": "launch",
+            "mainClass": "calculator.CalculatorApplication",
+            "projectName": "Osa01_11.Calculator"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - HelloBrowser",
+            "request": "launch",
+            "mainClass": "HelloBrowser",
+            "projectName": "Osa01_01.HelloBrowser"
+        }
+    ]
+}

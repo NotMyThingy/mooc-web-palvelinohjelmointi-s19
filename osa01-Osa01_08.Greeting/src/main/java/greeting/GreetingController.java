@@ -8,4 +8,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class GreetingController {
 
+    @GetMapping("/greet")
+    @ResponseBody
+    public String home(@RequestParam String greeting, @RequestParam String name) {
+        return greeting + ", " + name;
+    }
+
 }

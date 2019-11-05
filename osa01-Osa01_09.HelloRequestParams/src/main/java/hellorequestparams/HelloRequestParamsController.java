@@ -9,4 +9,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HelloRequestParamsController {
 
+    @GetMapping("/hello")
+    @ResponseBody
+    public String hello(@RequestParam String param) {
+        return "Hello " + param;
+    }
+
+    @GetMapping("/params")
+    @ResponseBody
+    public String params(@RequestParam Map<String, String> params) {
+        return params.toString();
+    }
 }

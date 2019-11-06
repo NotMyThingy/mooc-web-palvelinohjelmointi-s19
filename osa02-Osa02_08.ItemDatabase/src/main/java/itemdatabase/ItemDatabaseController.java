@@ -19,4 +19,13 @@ public class ItemDatabaseController {
         return "index";
     }
 
+    @PostMapping("/")
+    public String post(@RequestParam String name) {
+        if (!name.trim().isEmpty()) {
+            itemRepository.save(new Item(name.trim()));
+        }
+
+        return "redirect:/";
+    }
+
 }

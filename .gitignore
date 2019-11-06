@@ -1,2 +1,6 @@
 .vscode
 sandbox
+/osa02-Osa02_01.HelloThymeleaf/target/
+/osa02-Osa02_02.HtmlPractice/target/
+/osa02-Osa02_03.HelloModel/target/
+/osa02-Osa02_04.HelloList/target/

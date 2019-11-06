@@ -6,14 +6,12 @@
 
     <body>
         <h1>Items</h1>
-
-        <!-- lisää toiminnallisuus listalla olevien esineiden listaamiseen -->
-
-        
-        <!-- Älä koske alla olevaan lomakkeeseen, tutustumme 
-        tiedon lisäämiseen hieman myöhemmin -->
+        <ol>
+            <li th:each="item : ${items}">
+                <span th:text="${item.name}">item</span> (<span th:text="${item.type}">type</span>)
+            </li>
+        </ol>
         <h2>Add item</h2>
-
         <form th:action="@{/}" method="POST">
             <span>Name:</span>
             <input type="text" name="name"/>

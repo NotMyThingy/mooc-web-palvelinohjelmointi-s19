@@ -18,7 +18,11 @@ public class HelloObjectsController {
         this.items.add(new Item("Wizard hat", "pointy"));
     }
 
-    // Tee tänne juuripolkuun tulevan GET-tyyppisen pyynnön käsittelevä metodi
+    @GetMapping("/")
+    public String home(Model model) {
+        model.addAttribute("items", items);
+        return "index";
+    }
 
     // Älä koske tähän metodiin -- tutustumme tiedon lisäämiseen hieman myöhemmin.
     @PostMapping("/")

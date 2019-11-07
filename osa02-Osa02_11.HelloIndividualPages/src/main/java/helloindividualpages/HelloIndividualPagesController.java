@@ -20,12 +20,21 @@ public class HelloIndividualPagesController {
         this.items.put(item.getIdentifier(), item);
     }
 
-
     @PostMapping("/")
     public String post(@RequestParam String name, @RequestParam String type) {
         Item item = new Item(name, type);
         this.items.put(item.getIdentifier(), item);
         return "redirect:/";
+    }
+
+    @GetMapping("/{item}")
+    public String single(Model model, @PathVariable String item) {
+        if (!this.items.containsKey(item)) {
+            return "redirect:/";
+        }
+
+        model.addAttribute("item", this.items.get(item));
+        return "single";
     }
 
     @GetMapping("/")

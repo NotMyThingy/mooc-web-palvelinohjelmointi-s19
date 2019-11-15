@@ -41,7 +41,8 @@ public class BankingController {
             account = accountRepository.save(account);
         }
 
-        // DO SOMETHING HERE
+        client.getAccounts().add(account);
+        clientRepository.save(client);
 
         return "redirect:/";
     }

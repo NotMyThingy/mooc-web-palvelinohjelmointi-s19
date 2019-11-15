@@ -17,5 +17,6 @@ public class Client extends AbstractPersistable<Long> {
 
     private String name;
 
-    // DO SOMETHING HERE
+    @OneToMany
+    private List<Account> accounts = new ArrayList();
 }

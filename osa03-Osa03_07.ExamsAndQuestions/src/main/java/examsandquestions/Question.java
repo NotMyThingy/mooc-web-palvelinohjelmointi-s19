@@ -1,6 +1,8 @@
 package examsandquestions;
 
+import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,5 +17,7 @@ public class Question extends AbstractPersistable<Long> {
     private String title;
     private String content;
 
+    @ManyToMany(mappedBy = "questions")
+    private List<Exam> exams;
 
 }

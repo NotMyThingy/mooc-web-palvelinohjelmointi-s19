@@ -19,6 +19,12 @@ public class AirportService {
         a.setIdentifier(identifier);
         a.setName(name);
 
+        for (Airport airport : airportRepository.findAll()) {
+            if (airport.getIdentifier().equalsIgnoreCase(identifier)) {
+                return;
+            }
+        }
+
         airportRepository.save(a);
     }
 }

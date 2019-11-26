@@ -5,6 +5,9 @@
         <meta charset="UTF-8" />
     </head>
     <body>
-        <h1>This page shall automatically contain the profile!</h1>
+        <h1 th:text="${profile}">This page shall automatically contain the profile!</h1>
+        <span th:text="${environment.getActiveProfiles()[0]}">
+            Das Profile!
+        </span>
     </body>
 </html>

@@ -30,31 +30,31 @@ public class MovieTest extends org.fluentlenium.adapter.junit.FluentTest {
         find("#name").fill().with("Uuno Epsanjassa");
         // Find field with id - "lengthInMinutes" and add value "92" to it.
         find("#lengthInMinutes").fill().with("92");
-        //    Submit the form
+        // Submit the form 
         find("form").first().submit();
-        //    Tarkistetaan että sivulla on teksti "Uuno Epsanjassa"
+        // Check, text "Uuno Espanjassa" exists
         assertTrue(pageSource().contains("Uuno Epsanjassa"));
-        //    Tarkistetaan ettei sivulla ole tekstiä "Uuno Turhapuro"
+        // Check, text "Uuno Turhapuro" does not exist
         assertFalse(pageSource().contains("Uuno Turhapuro"));
-        //    Mennään näyttelijäsivulle
+        // Go to actors page
         goTo("http://localhost:" + port + "/actors");
-        //    Tarkistetaan ettei sivulla ole tekstiä "Uuno Turhapuro"
+        // Check, text "Uuno Turhapuro" does not exist
         assertFalse(pageSource().contains("Uuno Turhapuro"));
-        //    Etsitään kenttä, jonka id on "name" ja asetetaan kenttään teksti "Uuno Turhapuro"
+        // Find field with id - "name" and insert "Uuno Turhapuro" into it.
         find("#name").fill().with("Uuno Turhapuro");
-        //    Lähetetään lomake
+        // Submit the form
         find("form").first().submit();
-        //    Tarkistetaan että sivulla on teksti "Uuno Turhapuro"
+        // Check, text "Uuno Turhapuro" exists
         assertTrue(pageSource().contains("Uuno Turhapuro"));
-        //    Etsitään linkki, jossa on teksti "Uuno Turhapuro" ja klikataan sitä
+        // Find link with text "Uuno Turhapuro" and click it
         find("a", containingText("Uuno Turhapuro")).click();
-        //    Etsitään nappi, jonka id on "add-to-movie" ja klikataan sitä.
+        // Find a button with id - "add-to-movie" and click it.
         find("#add-to-movie").click();
-        //    Mennään elokuvasivulle
+        // Go to movies page
         goTo("http://localhost:" + port + "/movies");
-        //    Tarkistetaan että sivulla on teksti "Uuno Epsanjassa"
+        // Check, text "Uuno Espanjassa" exists
         assertTrue(pageSource().contains("Uuno Epsanjassa"));
-        //    Tarkistetaan että sivulla on teksti "Uuno Turhapuro"
+        // Check, text "Uuno Turhapuro" exists
         assertTrue(pageSource().contains("Uuno Turhapuro"));
     }
 

@@ -21,25 +21,25 @@ public class ReloadController {
 
     @RequestMapping("*")
     public String reload(Model model) {
-        ReloadStatus rs = null;
+        ReloadStatus status = null;
 
         if (session.getAttribute("name") != null) {
             String name = (String) session.getAttribute("name");
-            rs = reloadStatusRepository.findByName(name);
+            status = reloadStatusRepository.findByName(name);
         }
 
-        if (rs == null) {
-            rs = new ReloadStatus(UUID.randomUUID().toString(), 0);
-            session.setAttribute("name", rs.getName());
+        if (status == null) {
+            status = new ReloadStatus("User" + UUID.randomUUID().toString().substring(0, 6), 0);
+            session.setAttribute("name", status.getName());
         }
 
-        rs.setReloads(rs.getReloads() + 1);
+        status.setReloads(status.getReloads() + 1);
 
-        rs = reloadStatusRepository.save(rs);
-        model.addAttribute("status", rs);
+        reloadStatusRepository.save(status);
+        model.addAttribute("status", status);
 
-        Pageable pageable = PageRequest.of(0, 5, Sort.by("reloads").descending());
-        model.addAttribute("scores", reloadStatusRepository.findAll(pageable).getContent());
+        Pageable pageable = PageRequest.of(0, 5, Sort.Direction.DESC, "reloads");
+        model.addAttribute("scores", reloadStatusRepository.findAll(pageable));
 
         return "index";
     }
